@@ -170,12 +170,12 @@ public class ExportTerrainWindow : EditorWindow
         }
         catch (Exception err)
         {
-            Debug.Log("Ошибка сохранение, сообщение ошибки: " + err.Message);
+            Debug.Log("Ошибка сохранения, сообщение ошибки: " + err.Message);
         }
         streamWriter.Close();
 
         _terrain = null;
-        EditorUtility.DisplayProgressBar("Сохранение гандшафта на диск", "Это может занять некоторое время...", 1f);
+        EditorUtility.DisplayProgressBar("Сохранение ландшафта на диск", "Это может занять некоторое время...", 1f);
         EditorWindow.GetWindow<ExportTerrainWindow>().Close();
         EditorUtility.ClearProgressBar();
     }
